@@ -1,171 +1,674 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentação de programação moderna e completa - JavaScript, Python, HTML, CSS e muito mais">
+    <title>TechDocs - Documentação de Programação</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
-    <title>Programming Documentation</title>
 </head>
 <body>
-    <nav id="navbar">
-        <header>Programming World</header>
-        <a class="nav-link" href="#Python">Python</a><br>
-        <a class="nav-link" href="#JavaScript">JavaScript</a><br>
-        <a class="nav-link" href="#Java">Java</a><br>
-        <a class="nav-link" href="#C++">C++</a><br>
-        <a class="nav-link" href="#CSharp">CSharp</a><br>
-        <a class="nav-link" href="#Ruby">Ruby</a><br>
-        <a class="nav-link" href="#Swift">Swift</a><br>
-        <a class="nav-link" href="#PHP">PHP</a><br>
-        <a class="nav-link" href="#Go">Go</a><br>
-        <a class="nav-link" href="#Rust">Rust</a><br>
-        <a class="nav-link" href="#TypeScript">TypeScript</a><br>
-        <a class="nav-link" href="#SQL">SQL</a><br>
-    </nav>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span class="logo-text">TechDocs</span>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-    <main id="main-doc">
-        <section id="Python" class="main-section">
-            <header>Python</header>
-            <p>Python is a versatile, high-level programming language known for its readability and simplicity. It supports multiple programming paradigms and has a vast ecosystem of libraries, making it suitable for various applications, from web development to data analysis.</p>
-            <code>print("Hello, World!")</code>
-            <ul>
-                <li>Object-oriented programming</li>
-                <li>Data science</li>
-                <li>Web development with frameworks like Django and Flask</li>
-            </ul>
-        </section>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                
+                <!-- Search -->
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Buscar na documentação..." 
+                        id="searchInput"
+                    >
+                </div>
 
-        <section id="JavaScript" class="main-section">
-            <header>JavaScript</header>
-            <p>JavaScript is a scripting language primarily used for web development. It enables dynamic content on websites, enhances user interfaces, and is commonly used in conjunction with HTML and CSS to create interactive web pages.</p>
-            <p>Additional information about JavaScript.</p>
-            <code>console.log("Hello, World!");</code>
-            <ul>
-                <li>Web development</li>
-                <li>Client-side scripting</li>
-                <li>Asynchronous programming</li>
-            </ul>
-        </section>
+                <!-- Navigation -->
+                <nav class="nav">
+                    <div class="nav-section">
+                        <h3 class="nav-title">Início</h3>
+                        <a href="#introducao" class="nav-link active">
+                            <span>Introdução</span>
+                        </a>
+                    </div>
 
-        <section id="Java" class="main-section">
-            <header>Java</header>
-            <p>Java is a general-purpose, object-oriented programming language. It's designed to be platform-independent, meaning code can run on any device with a Java Virtual Machine (JVM). Java is widely used for building enterprise-level applications and Android apps.</p>
-            <p>Additional information about Java.</p>
-            <code>System.out.println("Hello, World!");</code>
-            <ul>
-                <li>Platform independence</li>
-                <li>Object-oriented programming</li>
-                <li>Concurrency and multithreading</li>
-            </ul>
-        </section>
+                    <div class="nav-section">
+                        <h3 class="nav-title">Linguagens</h3>
+                        <a href="#javascript" class="nav-link">
+                            <span>JavaScript</span>
+                        </a>
+                        <a href="#python" class="nav-link">
+                            <span>Python</span>
+                        </a>
+                        <a href="#html" class="nav-link">
+                            <span>HTML</span>
+                        </a>
+                        <a href="#css" class="nav-link">
+                            <span>CSS</span>
+                        </a>
+                    </div>
 
-        <section id="C++" class="main-section">
-            <header>C++</header>
-            <p>C++ is an extension of the C programming language with additional features like object-oriented programming. It's used for systems/software development, game development, and performance-critical applications due to its efficiency.</p>
-            <p>Additional information about C++.</p>
-            <code>#include <iostream> <br> int main() { <br> &nbsp;&nbsp; std::cout << "Hello, World!" << std::endl; <br> &nbsp;&nbsp; return 0; <br> }</code>
-            <ul>
-                <li>Efficient memory management</li>
-                <li>Object-oriented programming</li>
-                <li>Low-level manipulation</li>
-            </ul>
-        </section>
+                    <div class="nav-section">
+                        <h3 class="nav-title">Frameworks</h3>
+                        <a href="#react" class="nav-link">
+                            <span>React</span>
+                        </a>
+                        <a href="#nodejs" class="nav-link">
+                            <span>Node.js</span>
+                        </a>
+                    </div>
 
-        <section id="CSharp" class="main-section">
-            <header>CSharp</header>
-            <p>C# (C Sharp) is a modern, object-oriented programming language developed by Microsoft. It is designed for building Windows applications, web services, and games using the .NET framework.</p>
-            <p>Additional information about C#.</p>
-            <code>Console.WriteLine("Hello, World!");</code>
-            <ul>
-                <li>Object-oriented programming</li>
-                <li>Windows application development</li>
-                <li>Integration with .NET framework</li>
-            </ul>
-        </section>
+                    <div class="nav-section">
+                        <h3 class="nav-title">Ferramentas</h3>
+                        <a href="#git" class="nav-link">
+                            <span>Git</span>
+                        </a>
+                        <a href="#bestpractices" class="nav-link">
+                            <span>Boas Práticas</span>
+                        </a>
+                    </div>
+                </nav>
 
-        <section id="Ruby" class="main-section">
-            <header>Ruby</header>
-            <p>Ruby is a dynamic, object-oriented scripting language known for its elegant syntax and developer-friendly features. It is commonly used for web development, with the Ruby on Rails framework being particularly popular.</p>
-            <p>Additional information about Ruby.</p>
-            <code>puts "Hello, World!"</code>
-            <ul>
-                <li>Web development with Ruby on Rails</li>
-                <li>Object-oriented programming</li>
-                <li>Dynamic typing</li>
-            </ul>
-        </section>
+            </div>
+        </aside>
 
-        <section id="Swift" class="main-section">
-            <header>Swift</header>
-            <p>Swift is a programming language created by Apple for building iOS, macOS, watchOS, and tvOS applications. It's designed to be fast, safe, and expressive, making it easier for developers to create powerful applications.</p>
-            <p>Additional information about Swift.</p>
-            <code>print("Hello, World!")</code>
-            <ul>
-                <li>iOS and macOS app development</li>
-                <li>Safe and expressive syntax</li>
-                <li>Interoperability with Objective-C</li>
-            </ul>
-        </section>
+        <!-- Main Content -->
+        <main class="main">
+            <div class="content">
 
-        <section id="PHP" class="main-section">
-            <header>PHP</header>
-            <p>PHP is a server-side scripting language designed for web development. It is embedded in HTML code and widely used to create dynamic web pages. PHP is particularly well-suited for building websites and web applications.</p>
-            <p>Additional information about PHP.</p>
-            <code>echo "Hello, World!";</code>
-            <ul>
-                <li>Server-side scripting</li>
-                <li>Dynamic web page creation</li>
-                <li>Integration with databases</li>
-            </ul>
-        </section>
+                <!-- Introdução -->
+                <section id="introducao" class="section">
+                    <div class="section-header">
+                        <h1>Bem-vindo ao TechDocs</h1>
+                        <p class="section-description">Sua referência completa para desenvolvimento web moderno</p>
+                    </div>
 
-        <section id="Go" class="main-section">
-            <header>Go</header>
-            <p>Go is a statically-typed language developed by Google. It is designed for simplicity, efficiency, and ease of use. Go is often used for building scalable and concurrent systems.</p>
-            <p>Additional information about Go.</p>
-            <code>package main <br> import "fmt" <br> func main() { <br> &nbsp;&nbsp; fmt.Println("Hello, World!") <br> }</code>
-            <ul>
-                <li>Concurrency support</li>
-                <li>Fast compilation</li>
-                <li>Simplicity and readability</li>
-            </ul>
-        </section>
+                    <div class="card">
+                        <p>Esta documentação oferece guias práticos e exemplos de código para as principais tecnologias de desenvolvimento web. Cada seção contém explicações claras, exemplos funcionais e boas práticas da indústria.</p>
 
-        <section id="Rust" class="main-section">
-            <header>Rust</header>
-            <p>Rust is a systems programming language focused on safety and performance. It's designed to prevent memory-related errors and is often used for building fast and reliable systems, especially in areas like operating systems and game engines.</p>
-            <p>Additional information about Rust.</p>
-            <code>fn main() { <br> &nbsp;&nbsp; println!("Hello, World!"); <br> }</code>
-            <ul>
-                <li>Memory safety without garbage collection</li>
-                <li>Concurrency without data races</li>
-                <li>Zero-cost abstractions</li>
-            </ul>
-        </section>
+                        <div class="alert alert-info">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            <div>
+                                <strong>Dica:</strong> Use a barra de busca acima para encontrar rapidamente o que procura.
+                            </div>
+                        </div>
 
-        <section id="TypeScript" class="main-section">
-            <header>TypeScript</header>
-            <p>TypeScript is a superset of JavaScript that adds static typing to the language. It is designed to make large-scale web development more manageable and maintainable by catching errors during development.</p>
-            <p>Additional information about TypeScript.</p>
-            <code>console.log("Hello, World!");</code>
-            <ul>
-                <li>Static typing for JavaScript</li>
-                <li>Enhanced tooling and code organization</li>
-                <li>Compatibility with existing JavaScript code</li>
-            </ul>
-        </section>
+                        <h2>O que você vai encontrar</h2>
+                        
+                        <div class="features">
+                            <div class="feature-item">
+                                <div class="feature-icon">📚</div>
+                                <div>
+                                    <h3>Documentação Completa</h3>
+                                    <p>Referências detalhadas de sintaxe e funcionalidades</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">💻</div>
+                                <div>
+                                    <h3>Exemplos Práticos</h3>
+                                    <p>Código real que você pode usar em seus projetos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <h3>Boas Práticas</h3>
+                                    <p>Padrões e convenções recomendados pela indústria</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🚀</div>
+                                <div>
+                                    <h3>Sempre Atualizado</h3>
+                                    <p>Conteúdo revisado com as versões mais recentes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="SQL" class="main-section">
-            <header>SQL</header>
-            <p>SQL (Structured Query Language) is not a general-purpose programming language but a domain-specific language for managing and querying relational databases. It is used to perform tasks such as inserting, updating, and retrieving data from databases.</p>
-            <p>Additional information about SQL.</p>
-            <code>SELECT * FROM table_name;</code>
-            <ul>
-                <li>Database querying and management</li>
-                <li>Data manipulation and retrieval</li>
-                <li>Relational database operations</li>
-            </ul>
-        </section>
-    </main>
+                <!-- JavaScript -->
+                <section id="javascript" class="section">
+                    <div class="section-header">
+                        <h1>JavaScript</h1>
+                        <p class="section-description">A linguagem de programação da web</p>
+                    </div>
+
+                    <div class="card">
+                        <p>JavaScript é a linguagem essencial para criar experiências web interativas. Moderna, versátil e amplamente adotada, é fundamental tanto para frontend quanto backend.</p>
+
+                        <h2>Variáveis e Tipos de Dados</h2>
+                        <p>JavaScript oferece três formas de declarar variáveis: <code>var</code>, <code>let</code> e <code>const</code>. Recomenda-se usar <code>let</code> e <code>const</code> em código moderno.</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">JavaScript</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>// Declaração de variáveis
+let nome = "João";          // Variável mutável
+const idade = 25;           // Constante (imutável)
+
+// Tipos de dados
+const texto = "Hello World";
+const numero = 42;
+const booleano = true;
+const array = [1, 2, 3, 4, 5];
+const objeto = { nome: "João", idade: 25 };
+const nulo = null;
+const indefinido = undefined;</code></pre>
+                        </div>
+
+                        <h2>Funções</h2>
+                        <p>Funções são blocos de código reutilizáveis. JavaScript suporta várias sintaxes:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">JavaScript</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>// Função tradicional
+function saudar(nome) {
+    return `Olá, ${nome}!`;
+}
+
+// Arrow function
+const saudarArrow = (nome) => `Olá, ${nome}!`;
+
+// Função com parâmetro padrão
+const saudarComPadrao = (nome = "Visitante") => {
+    return `Bem-vindo, ${nome}!`;
+};
+
+// Função assíncrona
+async function buscarDados(url) {
+    const resposta = await fetch(url);
+    return await resposta.json();
+}</code></pre>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <div>
+                                <strong>Atenção:</strong> Arrow functions não possuem seu próprio <code>this</code>. Use funções regulares quando precisar de contexto <code>this</code>.
+                            </div>
+                        </div>
+
+                        <h2>Arrays e Métodos</h2>
+                        <p>JavaScript oferece métodos poderosos para trabalhar com arrays:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">JavaScript</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>const numeros = [1, 2, 3, 4, 5];
+
+// Map - transforma cada elemento
+const dobrados = numeros.map(n => n * 2);
+// [2, 4, 6, 8, 10]
+
+// Filter - seleciona elementos
+const pares = numeros.filter(n => n % 2 === 0);
+// [2, 4]
+
+// Reduce - combina em único valor
+const soma = numeros.reduce((acc, n) => acc + n, 0);
+// 15
+
+// Find - encontra primeiro match
+const primeiroPar = numeros.find(n => n % 2 === 0);
+// 2</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Python -->
+                <section id="python" class="section">
+                    <div class="section-header">
+                        <h1>Python</h1>
+                        <p class="section-description">Simples, poderoso e versátil</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Python é conhecida por sua sintaxe clara e legível, sendo ideal para iniciantes e poderosa o suficiente para aplicações complexas.</p>
+
+                        <h2>Variáveis e Tipos</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Python</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code># Atribuição simples
+nome = "João"
+idade = 25
+desenvolvedor = True
+
+# Tipos de dados
+texto = "Hello World"
+numero = 42
+flutuante = 3.14
+lista = [1, 2, 3, 4, 5]
+tupla = (1, 2, 3)
+dicionario = {"nome": "João", "idade": 25}
+conjunto = {1, 2, 3, 4}</code></pre>
+                        </div>
+
+                        <h2>List Comprehensions</h2>
+                        <p>Python oferece uma forma concisa e elegante de criar listas:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Python</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code># List comprehension básica
+numeros = [i * 2 for i in range(10)]
+
+# Com condição
+pares = [n for n in range(10) if n % 2 == 0]
+
+# Dictionary comprehension
+quadrados = {x: x**2 for x in range(5)}</code></pre>
+                        </div>
+
+                        <div class="alert alert-success">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Boa Prática:</strong> Use list comprehensions para transformações simples. Para lógica complexa, loops regulares são mais legíveis.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HTML -->
+                <section id="html" class="section">
+                    <div class="section-header">
+                        <h1>HTML</h1>
+                        <p class="section-description">A estrutura da web</p>
+                    </div>
+
+                    <div class="card">
+                        <p>HTML (HyperText Markup Language) define a estrutura e o significado do conteúdo na web.</p>
+
+                        <h2>Estrutura Básica</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">HTML</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Título Principal&lt;/h1&gt;
+        &lt;nav&gt;Navegação&lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;Conteúdo&lt;/article&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;Rodapé&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+
+                        <h2>Elementos Semânticos</h2>
+                        <p>Use tags semânticas para melhorar acessibilidade e SEO:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">HTML</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>&lt;header&gt;Cabeçalho&lt;/header&gt;
+&lt;nav&gt;Navegação&lt;/nav&gt;
+&lt;main&gt;Conteúdo principal&lt;/main&gt;
+&lt;article&gt;Artigo&lt;/article&gt;
+&lt;section&gt;Seção&lt;/section&gt;
+&lt;aside&gt;Conteúdo lateral&lt;/aside&gt;
+&lt;footer&gt;Rodapé&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CSS -->
+                <section id="css" class="section">
+                    <div class="section-header">
+                        <h1>CSS</h1>
+                        <p class="section-description">Estilização e layout</p>
+                    </div>
+
+                    <div class="card">
+                        <p>CSS (Cascading Style Sheets) controla a apresentação visual das páginas web.</p>
+
+                        <h2>Flexbox</h2>
+                        <p>Flexbox facilita a criação de layouts flexíveis e responsivos:</p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">CSS</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.item {
+    flex: 1;
+    padding: 20px;
+}</code></pre>
+                        </div>
+
+                        <h2>Grid Layout</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">CSS</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- React -->
+                <section id="react" class="section">
+                    <div class="section-header">
+                        <h1>React</h1>
+                        <p class="section-description">Biblioteca para interfaces</p>
+                    </div>
+
+                    <div class="card">
+                        <p>React é uma biblioteca JavaScript para construir interfaces de usuário com componentes reutilizáveis.</p>
+
+                        <h2>Componentes e Hooks</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">React</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>import { useState } from 'react';
+
+function Contador() {
+    const [count, setCount] = useState(0);
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Contagem: {count}&lt;/p&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;
+                Incrementar
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Node.js -->
+                <section id="nodejs" class="section">
+                    <div class="section-header">
+                        <h1>Node.js</h1>
+                        <p class="section-description">JavaScript no servidor</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Node.js permite executar JavaScript no servidor, construindo APIs e aplicações backend escaláveis.</p>
+
+                        <h2>Servidor Express</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Node.js</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello World!' });
+});
+
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
+});</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Git -->
+                <section id="git" class="section">
+                    <div class="section-header">
+                        <h1>Git</h1>
+                        <p class="section-description">Controle de versão</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Git é essencial para rastrear mudanças e colaborar em projetos de código.</p>
+
+                        <h2>Comandos Básicos</h2>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Terminal</span>
+                                <button class="code-copy" aria-label="Copiar código">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                            <pre><code># Inicializar repositório
+git init
+
+# Adicionar arquivos
+git add .
+
+# Commit
+git commit -m "Mensagem descritiva"
+
+# Push para remoto
+git push origin main
+
+# Pull mudanças
+git pull origin main</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Best Practices -->
+                <section id="bestpractices" class="section">
+                    <div class="section-header">
+                        <h1>Boas Práticas</h1>
+                        <p class="section-description">Escreva código melhor</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Seguir boas práticas garante código limpo, manutenível e profissional.</p>
+
+                        <h2>Princípios Fundamentais</h2>
+
+                        <div class="practices-grid">
+                            <div class="practice-card">
+                                <h3>🎯 Código Limpo</h3>
+                                <p>Escreva código legível e autoexplicativo. Nomes de variáveis devem ser descritivos.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>📝 Documentação</h3>
+                                <p>Comente o porquê, não o que. O código deve ser autoexplicativo.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>🧪 Testes</h3>
+                                <p>Teste seu código regularmente. Testes previnem bugs e facilitam refatoração.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>🔒 Segurança</h3>
+                                <p>Valide todas as entradas. Nunca confie em dados do usuário.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>⚡ Performance</h3>
+                                <p>Otimize quando necessário. Não otimize prematuramente.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>♿ Acessibilidade</h3>
+                                <p>Torne seu código acessível a todos. Use HTML semântico e ARIA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="main.js"></script>
 </body>
 </html>
